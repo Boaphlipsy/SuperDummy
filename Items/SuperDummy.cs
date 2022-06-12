@@ -52,7 +52,7 @@ namespace SuperDummy.Items
                                 npc.life = 0;
                                 npc.HitEffect();
                                 npc.StrikeNPCNoInteraction(int.MaxValue, 0, 0, false, false, false);
-                                SoundEngine.PlaySound(SoundID.Dig, npc.position, 0);
+                                SoundEngine.PlaySound(SoundID.Dig, npc.position);
                             }
                         }
                     }
@@ -62,7 +62,7 @@ namespace SuperDummy.Items
                         {
                             if (Main.npc[i].active && Main.npc[i].type == ModContent.NPCType<NPCs.SuperDummy>())
                             {
-                                SoundEngine.PlaySound(SoundID.Dig, Main.npc[i].position, 0);
+                                SoundEngine.PlaySound(SoundID.Dig, Main.npc[i].position);
                             }
                         }
                         var net = Mod.GetPacket();

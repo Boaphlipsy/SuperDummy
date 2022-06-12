@@ -6,6 +6,8 @@ The spawned Dummy works like a vanilla Target Dummy but can also be detected by 
 You can spawn new Dummies with Left Click and remove all Dummies with Right Click.
 
 Changelog:
+1.9:
+-   Adjusted Code to work with the new Modloader Changes.
 1.8:
 -   Fixed Bug where the dummy wouldn't spawn
 1.7:

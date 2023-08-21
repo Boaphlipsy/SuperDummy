@@ -6,6 +6,10 @@ The spawned Dummy works like a vanilla Target Dummy but can also be detected by 
 You can spawn new Dummies with Left Click and remove all Dummies with Right Click.
 
 Changelog:
+2.0.0:
+-   Updated to tModLoader 1.4.4
+1.10:
+-   Adjusted Code to work with the new Modloader Changes.
 1.9:
 -   Adjusted Code to work with the new Modloader Changes.
 1.8:
@@ -26,7 +30,7 @@ Changelog:
 1.1:
 -   Added autoswing to the item.
 -   Added a sound when removing the dummys.
-1.0: 
+1.0:
 -   Inital Release.
 
 Credit: Fargo's Mutant Mod (Also has a Super Dummy which gave me the idea)

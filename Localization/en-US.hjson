@@ -1,0 +1,18 @@
+Mods: {
+	SuperDummy: {
+		Items: {
+			SuperDummy: {
+				DisplayName: Super Dummy
+				Tooltip:
+					'''
+					Spawns a super dummy at your cursor
+					Can be detected by minions and homing projectiles
+					Right click to remove all spawned super dummies
+					'''
+			}
+		}
+
+		NPCs.SuperDummy.DisplayName: Super Dummy
+		Projectiles.DummySpawn.DisplayName: Super Dummy Spawn
+	}
+}

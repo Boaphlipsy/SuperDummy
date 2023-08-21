@@ -11,10 +11,14 @@ namespace SuperDummy.Items
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Super Dummy");
-            Tooltip.SetDefault("Spawns a super dummy at your cursor\n" +
-                "Can be detected by minions and homing prjectiles\n" +
-                "Right click to remove all spawned super dummies");
+            /*string displayName = "Super Dummy";
+            string tooltip =
+                "Spawns a super dummy at your cursor\n" +
+                "Can be detected by minions and homing projectiles\n" +
+                "Right click to remove all spawned super dummies";
+
+            DisplayName.SetDefault(displayName);
+            Tooltip.SetDefault(tooltip);*/
 
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
@@ -51,7 +55,7 @@ namespace SuperDummy.Items
                                 NPC npc = Main.npc[i];
                                 npc.life = 0;
                                 npc.HitEffect();
-                                npc.StrikeNPCNoInteraction(int.MaxValue, 0, 0, false, false, false);
+                                npc.SimpleStrikeNPC(int.MaxValue, 0);
                                 SoundEngine.PlaySound(SoundID.Dig, npc.position);
                             }
                         }

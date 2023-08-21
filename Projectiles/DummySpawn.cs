@@ -7,7 +7,7 @@ namespace SuperDummy.Projectiles
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Dummy Spawn");
+            //DisplayName.SetDefault("Super Dummy Spawn");
         }
 
         public override void SetDefaults()

@@ -23,7 +23,7 @@ namespace SuperDummy
                                 NPC npc = Main.npc[i];
                                 npc.life = 0;
                                 npc.HitEffect();
-                                npc.StrikeNPCNoInteraction(int.MaxValue, 0, 0, false, false, false);
+                                npc.SimpleStrikeNPC(int.MaxValue, 0);
 
                                 if (Main.netMode == NetmodeID.Server)
                                 {
@@ -32,9 +32,6 @@ namespace SuperDummy
                             }
                         }
                     }
-                    break;
-
-                default:
                     break;
             }
         }

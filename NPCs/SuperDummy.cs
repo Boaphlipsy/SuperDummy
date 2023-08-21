@@ -7,15 +7,13 @@ namespace SuperDummy.NPCs
 {
     class SuperDummy : ModNPC
     {
-        private bool recentlyHit = false;
-        private bool onSpawn = true;
-        private int hitDirection = 0;
-        private int amountOfFrames = 10;
+        private bool recentlyHit, onSpawn = true;
+        private int hitDirection, amountOfFrames = 10;
         private int height = 50;
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Super Dummy");
+            // DisplayName.SetDefault("Super Dummy");
             NPCID.Sets.NPCBestiaryDrawModifiers bestiaryData = new NPCID.Sets.NPCBestiaryDrawModifiers(0)
             {
                 Hide = true
@@ -70,7 +68,7 @@ namespace SuperDummy.NPCs
 
         public void HitAnimation()
         {
-            if (recentlyHit == true)
+            if (recentlyHit)
             {
                 NPC.frameCounter++;
                 if (NPC.frameCounter >= 6)
@@ -151,7 +149,7 @@ namespace SuperDummy.NPCs
             }
         }
 
-        public override void HitEffect(int hitDirection, double damage)
+        public override void HitEffect(NPC.HitInfo hit)
         {
             recentlyHit = true;
             NPC.frame.Y = 0;
@@ -159,12 +157,12 @@ namespace SuperDummy.NPCs
             if (NPC.spriteDirection == 1)
             {
                 //Damage from Left
-                if (hitDirection == 1)
+                if (hit.HitDirection == 1)
                 {
                     NPC.frame.Y = height * 1;
                 }
                 //Damage from Right
-                else if (hitDirection == -1)
+                else if (hit.HitDirection == -1)
                 {
                     NPC.frame.Y = height * 5;
                 }
@@ -173,20 +171,18 @@ namespace SuperDummy.NPCs
             else
             {
                 //Damage from Left
-                if (hitDirection == 1)
+                if (hit.HitDirection == 1)
                 {
                     NPC.frame.Y = height * 5;
                 }
                 //Damage from Right
-                else if (hitDirection == -1)
+                else if (hit.HitDirection == -1)
                 {
                     NPC.frame.Y = height * 1;
                 }
             }
             NPC.frameCounter = 0;
-            this.hitDirection = hitDirection;
-
-            base.HitEffect(hitDirection, damage);
+            hitDirection = hit.HitDirection;
         }
 
         public override bool CheckDead()

@@ -42,9 +42,9 @@ namespace SuperDummy.Items
 
         public override bool? UseItem(Player player)
         {
-            if (player.whoAmI == Main.myPlayer)
+            if (player.altFunctionUse == ItemAlternativeFunctionID.ActivatedAndUsed)
             {
-                if (player.altFunctionUse == ItemAlternativeFunctionID.ActivatedAndUsed)
+                if (player.whoAmI == Main.myPlayer)
                 {
                     if (Main.netMode == NetmodeID.SinglePlayer)
                     {
@@ -55,7 +55,7 @@ namespace SuperDummy.Items
                                 NPC npc = Main.npc[i];
                                 npc.life = 0;
                                 npc.HitEffect();
-                                npc.SimpleStrikeNPC(int.MaxValue, 0);
+                                npc.SimpleStrikeNPC(int.MaxValue, 0, false, 0, null, false, 0, true);
                                 SoundEngine.PlaySound(SoundID.Dig, npc.position);
                             }
                         }
@@ -70,15 +70,15 @@ namespace SuperDummy.Items
                             }
                         }
                         var net = Mod.GetPacket();
-                        net.Write((byte)1);
+                        net.Write((byte)5);
                         net.Send();
                     }
                 }
-                else
-                {
-                    Vector2 pos = new Vector2((int)Main.MouseWorld.X, (int)Main.MouseWorld.Y - 20);
-                    Projectile.NewProjectile(player.GetSource_ItemUse(Item), pos, Vector2.Zero, ModContent.ProjectileType<DummySpawn>(), 0, 0, player.whoAmI, ModContent.NPCType<NPCs.SuperDummy>());
-                }
+            }
+            else if (NPC.CountNPCS(ModContent.NPCType<NPCs.SuperDummy>()) < 50)
+            {
+                Vector2 pos = new((int)Main.MouseWorld.X - 9, (int)Main.MouseWorld.Y - 20);
+                Projectile.NewProjectile(player.GetSource_ItemUse(Item), pos, Vector2.Zero, ModContent.ProjectileType<DummySpawn>(), 0, 0, player.whoAmI, ModContent.NPCType<NPCs.SuperDummy>());
             }
 
             return true;

@@ -6,6 +6,8 @@ The spawned Dummy works like a vanilla Target Dummy but can also be detected by 
 You can spawn new Dummies with Left Click and remove all Dummies with Right Click.
 
 Changelog:
+2.0.1:
+-   Fixed bug of client not being able to spawn it
 2.0.0:
 -   Updated to tModLoader 1.4.4
 1.10:

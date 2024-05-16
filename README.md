@@ -1,4 +1,4 @@
-Adds the Super Dummy item which can be crafted out of a Target Dummy and a Mana Crystal at a Workbench.
+﻿Adds the Super Dummy item which can be crafted out of a Target Dummy and a Mana Crystal at a Workbench.
 
 If you use the Item a Super Dummy spawns at your Cursor location.
 The spawned Dummy works like a vanilla Target Dummy but can also be detected by Minions and homing Projectiles.
@@ -8,33 +8,33 @@ You can spawn new Dummies with Left Click and remove all Dummies with Right Clic
 Changelog:
 2.0.2:
 -   Actually fixed the 2.0.1 bug
-2.0.1:
+    2.0.1:
 -   Fixed bug of client not being able to spawn it
-2.0.0:
+    2.0.0:
 -   Updated to tModLoader 1.4.4
-1.10:
+    1.10:
 -   Adjusted Code to work with the new Modloader Changes.
-1.9:
+    1.9:
 -   Adjusted Code to work with the new Modloader Changes.
-1.8:
+    1.8:
 -   Fixed Bug where the dummy wouldn't spawn
-1.7:
+    1.7:
 -   Adjusted Code to work with the new Modloader Changes.
-1.6:
+    1.6:
 -   Fixed Multiplayer.
-1.5:
+    1.5:
 -   Fixed the mod description.
-1.4:
+    1.4:
 -   Adjusted the hitting animation.
-1.3:
--   Added an animation when hitting the dummy. 
+    1.3:
+-   Added an animation when hitting the dummy.
 -   The dummy now faces the player when spawned.
-1.2:
+    1.2:
 -   Moved description from Steam Workshop to the Mod itself.
-1.1:
+    1.1:
 -   Added autoswing to the item.
 -   Added a sound when removing the dummys.
-1.0:
+    1.0:
 -   Inital Release.
 
 Credit: Fargo's Mutant Mod (Also has a Super Dummy which gave me the idea)

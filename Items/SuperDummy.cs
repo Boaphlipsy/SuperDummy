@@ -70,7 +70,7 @@ namespace SuperDummy.Items
                             }
                         }
                         var net = Mod.GetPacket();
-                        net.Write((byte)5);
+                        net.Write((byte)1);
                         net.Send();
                     }
                 }

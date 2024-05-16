@@ -25,10 +25,7 @@ namespace SuperDummy
                                 npc.HitEffect();
                                 npc.SimpleStrikeNPC(int.MaxValue, 0);
 
-                                if (Main.netMode == NetmodeID.Server)
-                                {
-                                    NetMessage.SendData(MessageID.SyncNPC, -1, -1, null, i);
-                                }
+                                NetMessage.SendData(MessageID.SyncNPC, -1, -1, null, i);
                             }
                         }
                     }
